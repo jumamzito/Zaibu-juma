@@ -1,4 +1,3 @@
-from tkinter import Widget
 import django_filters
 from django_filters import CharFilter
 
