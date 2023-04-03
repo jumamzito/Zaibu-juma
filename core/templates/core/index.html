@@ -45,7 +45,7 @@
 							<div id="corner-tl" class="corner"></div>
 							<div id="corner-tr" class="corner"></div>
 							<h3>What I Do</h3>
-							<p>Data science masters Student who enjoys working on Machine learning projects.</p>
+							<p>Data science and analytics masters Student who enjoys working on Machine learning projects.</p>
 							<div id="corner-br" class="corner"></div>
 							<div id="corner-bl" class="corner"></div>
 						</div>
@@ -62,22 +62,24 @@
 				<div class="about-me">
 					<h4>More about me</h4>
 
-					<p>I build new projects to improve my machine learning skills and overall python projects.</p>
+					<p>Currently working on machine learning and analytics projects as part of my work and side projects</p>
 
-					<p>Working on real world projects especially those to help solve real world projects is something am currently working on.</p>
+					<p>Working to develop a machine learning and artificial intelligence for small and medium business.</p>
 
 
 					<hr>
 
 					<h4>TOP EXPERTISE</h4>
 
-					<p>Data scientist with python as the main language: <a target="_blank" href="{% static 'resume.pdf' %}">Download Resume</a></p>
+					<p>Data scientist and analytics major with python as the main language: <a target="_blank" href="{% static 'resume.pdf' %}">Download Resume</a></p>
+					<p>Current Data analytics Project. Study of Health Facilities in Kenya:<a target="_blank" href="{% static 'Health Data Project.pdf' %}">Download Dashboard</a></p>
+					<p>Study of Food prices Kenya. <a target="_blank" href="{% static 'Cost of Prices.pdf' %}">Download Dashboard</a></p>
 
 					<div id="skills">
 						<ul>
 							<li>Machine Learning</li>
+							<li>Data analysis</li>
 							<li>Python</li>
-							<li>Django</li>
 							<li>Postgres</li>
 							<li>SQL</li>
 						</ul>
@@ -116,7 +118,7 @@
 				{% for post in posts %}
 				<div>
 					<div class="post">
-						<img class="thumbnail" src="{% static 'images/dash.jpg' %}">
+						<img class="thumbnail" src="{{post.thumbnail.url}}">
 						<div class="post-preview">
 							<h6 class="post-title">{{post.headline}}</h6>
 							<p class="post-intro">{{post.sub_headline}}</p>

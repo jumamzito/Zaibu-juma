@@ -21,6 +21,7 @@ class Post(models.Model):
     featured = models.BooleanField(default=False)
     tags = models.ManyToManyField(Tag,null=True)
     slug = models.SlugField(null=True, blank=True)
+    modified_date = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.headline
@@ -38,3 +39,5 @@ class Post(models.Model):
             self.slug=slug
         super().save(*args, **kwargs)
 
+    class Meta:
+        ordering = ['-modified_date']

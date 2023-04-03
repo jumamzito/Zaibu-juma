@@ -3,17 +3,54 @@
 {% block content %}
 
 <style type="text/css">
-    img{
+
+    /* .post-body.style {
+    max-width: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
+     } */
+   .post-image {
         max-width: 100%;
         object-fit: cover;
+        margin-bottom: 20px;
+    }
+
+    .post-title {
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #0d1b2a;
+    }
+
+    .post-subtitle {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #495057;
+    }
+
+    .post-body {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 40px;
+        max-width: 100%;
+    }
+
+    .post-body img {
+        max-width: 100%;
+        height: 500px;
+        
     }
 </style>
-<div class="main-container">
-    <img src="{% static 'images/zaibu.jpg' %}">
-    <h1>{{post.headline}}</h1>
-    <h4>{{post.sub_headline}}</h4>
-    <p>{{post.body|safe}}</p>
 
+<div class="container">
+    <div class="row">
+        <div>
+            <!-- <img src="{% static 'images/zaibu.jpg' %}" class="post-image"> -->
+            <h1 class="post-title">{{post.headline}}</h1>
+            <h4 class="post-subtitle">{{post.sub_headline}}</h4>
+            <div class="post-body">{{post.body|safe}}</div>
+        </div>
+    </div>
 </div>
 
 {% endblock content %}
